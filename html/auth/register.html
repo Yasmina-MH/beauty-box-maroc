@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription | Beauty Box</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="delivery-banner">
+        🚚 Livraison gratuite à Marrakech • 30DHS partout au Maroc
+    </div>
+
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">Beauty Box</a>
+            <div class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../products.html">Nos Boxes</a>
+                <a href="login.html">Mon Compte</a>
+                <a href="../cart.html" class="cart-link">
+                    🛒 Panier (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <input type="text" placeholder="Nom complet" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Téléphone" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <input type="password" placeholder="Confirmez le mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+            <p>Déjà inscrit ? <a href="login.html">Connectez-vous</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Identique à index.html -->
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
