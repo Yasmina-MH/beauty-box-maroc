@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Pages
@@ -26,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .  # 📌 Toute la racine (où index.html est présent)
+          path: .  # ou ./dist selon ton projet
 
   deploy:
     needs: build
