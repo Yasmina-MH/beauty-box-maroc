@@ -1,0 +1,27 @@
+name: pages-build-deployment
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: pages-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Ajoute ici tes étapes de build, par exemple :
+      - name: Build
+        run: echo "Build process here..."
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploy process here..."
