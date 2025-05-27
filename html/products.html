@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits | Beauty Box Maroc</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="delivery-banner">
+        🚚 Livraison gratuite à Marrakech • 30DHS partout au Maroc
+    </div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Beauty Box</a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="products.html" class="active">Nos Boxes</a>
+                <a href="auth/login.html">Mon Compte</a>
+                <a href="cart.html" class="cart-link">
+                    🛒 Panier (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <h1>Nos Boxes Maquillage</h1>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="visage">Visage</button>
+            <button class="filter-btn" data-filter="yeux">Yeux</button>
+            <button class="filter-btn" data-filter="levres">Lèvres</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Les produits seront ajoutés dynamiquement par products.js -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Même footer que index.html -->
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
