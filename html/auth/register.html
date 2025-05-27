@@ -6,46 +6,78 @@
     <title>Inscription | Beauty Box</title>
     <link rel="stylesheet" href="../css/auth.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="delivery-banner">
-        🚚 Livraison gratuite à Marrakech • 30DHS partout au Maroc
-    </div>
-
-    <header>
-        <nav>
-            <a href="../index.html" class="logo">Beauty Box</a>
-            <div class="nav-links">
-                <a href="../index.html">Accueil</a>
-                <a href="../products.html">Nos Boxes</a>
-                <a href="login.html">Mon Compte</a>
-                <a href="../cart.html" class="cart-link">
-                    🛒 Panier (<span id="cart-count">0</span>)
-                </a>
-            </div>
-        </nav>
+    <header class="auth-header">
+        <a href="../index.html" class="logo">
+            <i class="fas fa-heart"></i> Beauty Box
+        </a>
     </header>
 
-    <main>
+    <main class="auth-main">
         <div class="auth-container">
-            <h2>Inscription</h2>
-            <form id="register-form">
-                <input type="text" placeholder="Nom complet" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Téléphone" required>
-                <input type="password" placeholder="Mot de passe" required>
-                <input type="password" placeholder="Confirmez le mot de passe" required>
-                <button type="submit">S'inscrire</button>
-            </form>
-            <p>Déjà inscrit ? <a href="login.html">Connectez-vous</a></p>
+            <div class="auth-welcome">
+                <h1>Rejoignez la communauté Beauty Box</h1>
+                <p>Créez votre compte pour :</p>
+                <ul class="auth-benefits">
+                    <li><i class="fas fa-check-circle"></i> Suivre vos commandes</li>
+                    <li><i class="fas fa-check-circle"></i> Accéder à des offres exclusives</li>
+                    <li><i class="fas fa-check-circle"></i> Enregistrer vos favoris</li>
+                </ul>
+            </div>
+
+            <div class="auth-form-container">
+                <form id="register-form" class="auth-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nom complet" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Téléphone (ex: 0612345678)" pattern="[0]{1}[5-7]{1}[0-9]{8}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="reg-password" placeholder="Mot de passe" required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Force du mot de passe</span>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirmez le mot de passe" required>
+                    </div>
+
+                    <div class="auth-terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">J'accepte les <a href="#">CGU</a> et la <a href="#">politique de confidentialité</a></label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+                        <i class="fas fa-user-plus"></i> S'inscrire
+                    </button>
+                </form>
+
+                <p class="auth-switch">
+                    Déjà membre ? <a href="login.html">Connectez-vous</a>
+                </p>
+            </div>
         </div>
     </main>
-
-    <footer>
-        <div class="footer-content">
-            <!-- Identique à index.html -->
-        </div>
-    </footer>
 
     <script src="../js/auth.js"></script>
     <script src="../js/main.js"></script>
